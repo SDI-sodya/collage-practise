@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Roboto Slab";
+  src: url(../fonts/RobotoSlab-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url(../fonts/Heebo-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+:root {
+  box-sizing: border-box;
+}
+/* Wrapper */
+.wrapper {
+  display: block;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background: url(../images/header_bg.jpg) no-repeat;
+  background-size: contain;
+}
+
+/* Navigation */
+.header-nav {
+  padding: 20px 0 0;
+}
+
+.header-nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+} 
+
+.main-nav-search {
+  display: flex;
+  width: 65%;
+  margin: 0 0 42px auto;
+  padding: 5px 0;
+  border-bottom: 2px solid #324950;
+}
+
+.input-search {
+  width: 90%;
+  background: none;
+  border: none;
+  font-family: "Roboto Slab";
+  font-size: 16px;
+  color: #324950;
+}
+
+.search-submit {
+  width: 10%;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.main-nav-list {
+  display: flex;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-family: Heebo;
+  font-weight: 550;
+  font-size: 18px;
+}
+
+.nav-a {
+  color: #324950;
+  padding: 0 5px;
+}
+
+/* Header Title (H1) */
+.header-title {
+  text-align: center;
+  padding: 230px 0 265px;
+  width: calc();
+}
+
+.title-text {
+  margin: 60px 0;
+  font-weight: bold;
+  font-size: 48px;
+  font-family: "Roboto Slab";
+  color: #735440;
+}
+
+.title-button {
+  background-color: #57984C;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 16px 31px;
+  border: none;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-family: Roboto, sans-serif;
+}
+
+/* First section (Products) */
+.section-products {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.product {
+  display: inline-block;
+  text-align: center;
+  margin: 0 50px;
+}
+
+.product-text {
+  margin: 20px 0 0;
+  font-family: "Roboto Slab";
+  text-transform: capitalize;
+}
