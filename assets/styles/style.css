@@ -306,6 +306,7 @@
   text-transform: uppercase;
   background-color: var(--main-text-color);
   color: #B9B9B9;
+  margin: 0;
 }
 
 /* var(--main/add-text-color) */
