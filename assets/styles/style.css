@@ -31,7 +31,7 @@
 .header {
   background: url(../images/header_bg.jpg) no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 /* Navigation */
@@ -95,7 +95,10 @@
 /* Header Title (H1) */
 .header-title {
   text-align: center;
-  margin: 25% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
 }
 
 .title-text {
