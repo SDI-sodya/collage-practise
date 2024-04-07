@@ -40,6 +40,7 @@
 }
 
 .header-nav-wrapper {
+  /* border: 1px solid #000; */
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -86,7 +87,6 @@
   margin-top: 42px;
 }
 
-
 .nav-a {
   color: var(--main-text-color);
   padding: 0 8px;
@@ -95,7 +95,7 @@
 /* Header Title (H1) */
 .header-title {
   text-align: center;
-  margin: 21% 0;
+  margin: 25% 0;
 }
 
 .title-text {
@@ -187,6 +187,10 @@
   filter: drop-shadow(0 20px 40px #00000040);
 }
 
+.about-block-image img {
+  width: 100%;
+}
+
 
 /* Main Activities */
 .section-main-activities {
@@ -214,6 +218,10 @@
 
 .activity-image {
   margin: 65px 0 21px;
+}
+
+.activity-image img {
+  width: 100%;
 }
 
 .activity-title {
@@ -266,10 +274,13 @@
   display: inline;
 }
 
+.footer-nav-list .nav-elem {
+  margin: 0 10px;
+}
+
 .footer-nav-list .nav-elem .nav-a {
   text-transform: uppercase;
   color: #ffffff;
-  padding: 0 10px;
 }
 
 .footer-social-list .nav-elem {
@@ -310,3 +321,157 @@
 }
 
 /* var(--main/add-text-color) */
+
+@media (max-width: 1330px) {
+  /* Wrapper */
+  .wrapper {
+    max-width: 920px;
+  }
+
+  /* Section About (Vision/Mission) */
+  .about-block-image {
+    width: 450px;
+  }
+
+  /* Footer */
+  .footer-navigation {
+    background-color: #2D3F45;
+    padding: 25px 0;
+    display: block;
+  }
+
+  .footer-nav-list {
+    width: 70%;
+    float: left;
+    font-family: "Roboto";
+  }
+
+  .footer-navigation .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-nav-list, .footer-social-list {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-nav-list {
+    justify-content: space-between;
+  }
+
+  .footer-social-list {
+    justify-content: space-around;
+  }
+
+  .footer-nav-list .nav-elem {
+    margin: 0;
+  }
+
+  .footer-nav-list, .footer-social-list {
+    display: block;
+  }
+
+  .footer-nav-list .nav-elem .nav-a {
+    padding: 0 0;
+  }
+
+  .footer-social-list .nav-elem {
+    margin: 0;
+  }
+}
+
+@media (max-width: 950px) {
+  /* Wrapper */
+  .wrapper {
+    max-width: 720px;
+  }
+  
+  /* Header (Navigation) */
+  .header-nav-wrapper {
+    flex-direction: column;
+  } 
+
+  .header-logo {
+    text-align: center;
+  }
+  
+  .main-nav-search {
+    width: 45%;
+    margin: 20px auto 0;
+    padding: 5px 0;
+  }
+
+  /* .nav-list-row {
+    justify-content: space-around;
+  } */
+
+  .main-nav-list {
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: Heebo;
+    font-weight: 550;
+    font-size: 18px;
+    margin-top: 42px;
+  }
+  
+  /* First section (Products) */
+  .product {
+    width: 200px;
+  }
+
+  /* Vision/Misson (Section About) */
+  .text-decoration {
+    margin: 20px 0;
+    letter-spacing: 5px;
+    color: var(--add-text-color);
+  }
+
+  .about-block-image {
+    width: 350px;
+  }
+
+  /* Main Activities */
+  .main-activities-info {
+    flex-wrap: wrap;
+  }
+
+  .main-activity {
+    width: 30%;
+  }
+
+  .activity-title {
+    font-size: 20px;
+  }
+
+  .activity-text {
+    font-size: 16px;
+  }
+
+  /* Footer */
+  .footer-navigation {
+    background-color: #2D3F45;
+    padding: 25px 0;
+    display: block;
+  }
+
+  .footer-nav-list {
+    width: 70%;
+    float: left;
+    font-family: "Roboto";
+  }
+
+  .footer-nav-list {
+    flex-wrap: wrap;
+  }
+
+  .footer-nav-list .nav-elem {
+    margin: 5px 0;
+  }
+
+  .footer-social-list .nav-elem {
+    margin: 0 0 0 13px;
+  }
+}
