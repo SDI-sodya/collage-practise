@@ -121,12 +121,12 @@
 }
 
 /* First section (Products) */
-.section-products {
+.homepage-products {
   padding: 40px 0;
   text-align: center;
 }
 
-.product {
+.homepage-product {
   display: inline-block;
   text-align: center;
   margin: 20px 50px;
@@ -145,7 +145,7 @@
 
 
 /* Vision/Misson (Section About) */
-.section-about {
+.homepage-about {
   background: url(../images/union_bg.png) no-repeat;
   background-color: #F7F7F7;
   background-position: center;
@@ -196,13 +196,13 @@
 
 
 /* Main Activities */
-.section-main-activities {
+.homepage-main-activities {
   background-color: #EDEDED;
   padding: 80px 0;
   text-align: center;
 }
 
-.section-main-activities-title {
+.homepage-main-activities-title {
   font-family: "Roboto Slab";
   font-size: 64px;
 }
@@ -421,7 +421,7 @@
   }
   
   /* First section (Products) */
-  .product {
+  .homepage-product {
     width: 200px;
   }
 
