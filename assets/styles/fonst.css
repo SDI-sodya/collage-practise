@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Roboto Slab";
+  src: url(../fonts/RobotoSlab-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url(../fonts/Heebo-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
