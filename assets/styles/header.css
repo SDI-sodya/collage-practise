@@ -1,17 +1,21 @@
-/* Header */
-.header {
-  /* background: url(../images/header_bg.jpg) no-repeat;
-  background-size: cover; */
-  /* min-height: 100vh; */
-}
-
-.homepage-header {
-  background: url(../images/header_bg.jpg) no-repeat;
-  background-size: cover;
-}
+/* Main Headers Options */
+/* .header {} */
 
 .header-logo {
   width: 113px;
+}
+
+.logo-image {
+  /* border: 1px solid #000; */
+  text-align: center;
+  height: 83px;
+}
+
+
+/* Homepage Header */
+.homepage-header {
+  background: url(../images/header_bg.jpg) no-repeat;
+  background-size: cover;
 }
 
 .homepage-logo {
@@ -22,12 +26,6 @@
   width: 100%;
 }
 
-.logo-image {
-  border: 1px solid #000;
-  text-align: center;
-  height: 83px;
-}
-
 
 /* Navigation */
 .header-nav {
@@ -35,7 +33,6 @@
 }
 
 .header-nav-wrapper {
-  /* border: 1px solid #000; */
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -91,7 +88,6 @@
 .title-text {
   font-weight: bold;
   font-size: 48px;
-  font-family: "Roboto Slab";
   color: #735440;
 }
 
