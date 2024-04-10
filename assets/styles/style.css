@@ -7,26 +7,19 @@
   --main-text-color: #324950;
   --add-text-color: #57984C;
   box-sizing: border-box;
+  font-family: "Roboto Slab";
   color: var(--main-text-color);
 }
 /* Wrapper */
 .wrapper {
-  /* border: 1px solid #f00; */
   display: block;
   max-width: 1110px;
   margin: 0 auto;
 }
 
-/* Main navigation options */
-.nav-list-row {
-  /* border: 1px solid #000; */
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-a {
-  color: var(--main-text-color);
-  padding: 0 8px;
+/* Others */
+.title {
+  font-size: 64px;
 }
 
 /* First section (Products) */
@@ -44,12 +37,7 @@
 
 .product-text {
   margin: 20px 0 0;
-  font-family: "Roboto Slab";
   text-transform: capitalize;
-}
-
-.product-image {
-  height: auto;
 }
 
 
@@ -73,18 +61,11 @@
 }
 
 .about-block-text {
-  font-family: "Roboto Slab";
-  color: var(--main-text-color);
   width: 45%;
-}
-
-.about-title {
-  font-size: 64px;
 }
 
 .about-text {
   line-height: 1.7em;
-  width: 100%;
   font-size: 20px;
 }
 
@@ -111,11 +92,6 @@
   text-align: center;
 }
 
-.homepage-main-activities-title {
-  font-family: "Roboto Slab";
-  font-size: 64px;
-}
-
 .main-activities-info {
   display: flex;
   justify-content: space-between;
@@ -132,12 +108,7 @@
   margin: 65px 0 21px;
 }
 
-.activity-image img {
-  width: 100%;
-}
-
 .activity-title {
-  font-family: "Roboto Slab";
   font-size: 24px;
   color: var(--add-text-color);
 }
@@ -147,14 +118,13 @@
   margin: 27px auto 20px;
   content: " ";
   display: block;
-  width: 60%;
+  /* width: 60%; */
   border: 1px solid var(--add-text-color);
 }
 
 .activity-text {
   margin: 0 auto;
   line-height: 1.5em;
-  font-family: "Roboto Slab";
   font-size: 18px;
   text-wrap: balance;
 }

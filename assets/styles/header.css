@@ -106,3 +106,14 @@
   font-family: Roboto, sans-serif;
   margin-top: 60px;
 }
+
+/* Main navigation options */
+.nav-list-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-a {
+  color: var(--main-text-color);
+  padding: 0 8px;
+}
