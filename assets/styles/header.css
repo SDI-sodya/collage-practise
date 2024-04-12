@@ -1,5 +1,7 @@
 /* Main Headers Options */
-/* .header {} */
+.header {
+  box-shadow: 0 4px 24px #f00;
+}
 
 .header-logo {
   width: 113px;

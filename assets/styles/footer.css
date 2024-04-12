@@ -1,4 +1,8 @@
 /* Footer */
+.footer {
+  clear: both;
+}
+
 .footer-navigation {
   background-color: #2D3F45;
   padding: 25px 0;
