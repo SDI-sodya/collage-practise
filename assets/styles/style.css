@@ -12,6 +12,7 @@
 }
 /* Wrapper */
 .wrapper {
+  position: relative;
   display: block;
   max-width: 1110px;
   margin: 0 auto;
@@ -20,6 +21,35 @@
 /* Others */
 .title {
   font-size: 64px;
+}
+
+a {
+  color: var(--main-text-color);
+}
+
+.return-back-text {
+  font-size: 14px;
+  padding: 18px 0;
+}
+
+.return-back-text a {
+  color: var(--add-text-color);
+}
+
+.button-item-info-download {
+  color: var(--add-text-color);
+  border: 2px solid var(--add-text-color);
+  border-radius: 50px;
+  padding: 10px 30px;
+}
+
+.list-style-disk {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.clear {
+  clear: both;
 }
 
 /* First section (Products) */
@@ -219,11 +249,115 @@
   font-size: 16px;
 }
 
-
-
 .attention-text {
   color: #ff0000;
   /* margin-left: 10px; */
+}
+
+
+/* Totamo Shop Item */
+.tomato-item-view {
+  background: url('../images/union_bg_tomato_shop_item.png') no-repeat center;
+  background-size: 50%;
+  background-color: #EDEDED;
+  z-index: 1;
+}
+
+.view-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.view-header-block {
+  width: 50%;
+}
+
+.view-illustration {
+  text-align: right;
+}
+
+.view-illustration-image {
+  width: 100%;
+}
+
+.view-illustration-image img {
+  width: 90%;
+}
+
+.button-item-info-download {
+  margin-top: 30px;
+}
+
+.tomato-view-title, .tomato-view-subtitle {
+  font-size: 54px;
+  line-height: 1.4;
+}
+
+.tomato-view-subtitle {
+  color: var(--add-text-color);
+}
+
+.view-fact {
+  margin: 40px 0;
+}
+
+.view-fact-info {
+  color: #CF2333;
+  font-size: 30px;
+}
+
+.view-info-section {
+  clear: both;
+}
+
+.view-info-block {
+  clear: both;
+}
+
+.view-info-block::after {
+  content: ' ';
+  clear: both;
+}
+
+.view-info {
+  width: 50%;
+  float: left;
+}
+
+.view-info:first-child {
+  margin-right: 0;
+}
+
+.view-info-title {
+  color: var(--add-text-color);
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.view-info-title::after {
+  /* text-align: center; */
+  margin: 12px 0 24px;
+  content: " ";
+  display: block;
+  width: 200px;
+  border: 1px solid var(--add-text-color);
+}
+
+.view-info {
+  margin: 30px 0;
+}
+
+.view-info-list {
+  line-height: 1.6;
+  font-size: 17px;
+}
+.view-info-list.list-style-disk {
+  line-height: 2;
+}
+
+.view-info-list .nav-list::marker {
+  color: var(--add-text-color);
 }
 
 /* .attention-text::after {
