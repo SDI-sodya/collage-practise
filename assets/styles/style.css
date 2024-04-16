@@ -25,6 +25,7 @@
 
 a {
   color: var(--main-text-color);
+  cursor: pointer;
 }
 
 .return-back-text {
@@ -287,6 +288,7 @@ a {
 
 .button-item-info-download {
   margin-top: 30px;
+  cursor: pointer;
 }
 
 .tomato-view-title, .tomato-view-subtitle {
