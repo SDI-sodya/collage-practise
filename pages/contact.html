@@ -33,15 +33,81 @@
       </nav>
     </div>
   </header>
-  <main class="main tomato-main">
+  <main class="main">
     <section class="slideshow">
-      <img src="../assets/images/slideshow/ss_1.jpg" alt="Slideshow_1">
+      <img src="../assets/images/slideshow/ss_2.jpg" alt="Slideshow-1">
     </section>
     <div class="wrapper">
-      <section class="market-info">
-        
+      <section class="contact-form-section">
+        <h1 class="title subtitle contact-title">Contact us</h1>
+        <p class="text-decoration">*****</p>
+        <form class="contact-form" action="#" method="get">
+          <div class="contact-form-block">
+            <label class="contact-form-label" for="name">
+              <p class="form-input-title">Name *</p>
+              <input required type="text" name="name" id="name">
+            </label>
+            <label class="contact-form-label" for="company-name">
+              <p class="form-input-title">Company name *</p>
+              <input required type="text" name="company-name" id="company-name">
+            </label>
+            <label class="contact-form-label" for="position">
+              <p class="form-input-title">Position *</p>
+              <input required type="text" name="position" id="position">
+            </label>
+            <label class="contact-form-label" for="city">
+              <p class="form-input-title">City *</p>
+              <input required type="text" name="city" id="city">
+            </label>
+            <label class="contact-form-label" class="contact-form-label" for="country">
+              <p class="form-input-title">Country *</p>
+              <input required type="text" name="country" id="country">
+            </label>
+            <label class="contact-form-label" for="tel">
+              <p class="form-input-title">Telephone *</p>
+              <input required type="tel" name="tel" id="tel">
+            </label>
+            <label class="contact-form-label" for="email">
+              <p class="form-input-title">Email *</p>
+              <input required type="email" name="email" id="email">
+            </label>
+          </div>
+          <div class="contact-form-block">
+            <label class="contact-form-label" for="who-are-u">
+              <p class="form-input-title">You are a *</p>
+              <select name="who-are-u" id="who-are-u">
+                <option value="seed-prod1">seed producer 1</option>
+                <option value="seed-prod2">seed producer 2</option>
+                <option value="seed-prod3">seed producer 3</option>
+                <option value="seed-prod4">seed producer 4</option>
+              </select>
+            </label>
+            <label class="contact-form-label" for="specify">
+              <p class="form-input-title">If others, please specify</p>
+              <input type="text" name="specify" id="specify">
+            </label>
+            <label class="contact-form-label" for="interested-in">
+              <p class="form-input-title">You are interested in</p>
+              <textarea name="interested-in" id="interested-in" cols="30" rows="14"></textarea>
+            </label>
+            <label class="contact-form-label" for="captcha">
+              <p class="form-input-title">Please type this code</p>
+              <span>74365</span>
+              <input required type="text" name="captcha" id="captcha">
+              <input class="submit-contact-form" type="submit" value="Send Message">
+            </label>
+          </div>
+        </form>
       </section>
+      <div class="clear"></div>
     </div>
+    <section class="contact-info">
+      <h2 class="title info-title">Our address</h2>
+      <p class="contact-info-text main-text">AGRIDERA Seeds & Agriculture Ltd.</p>
+      <p class="contact-info-text main-text">P.O Box 103,</p>
+      <p class="contact-info-text main-text">Gedera 70750, Israel.</p>
+      <p class="contact-info-text main-text">Telephone: <a class="a-tel" href="tel:+97289449222">+972 8 944 9222</a></p>
+    </section>
   </main>
   <footer class="footer">
     <nav class="footer-navigation">
