@@ -54,6 +54,7 @@ a {
 }
 
 .button-item-info-download {
+  background-color: #ffffff;
   color: var(--add-text-color);
   border: 2px solid var(--add-text-color);
   border-radius: 50px;
