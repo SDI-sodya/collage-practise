@@ -3,10 +3,6 @@
   /* box-shadow: 0 4px 24px #f00; */
 }
 
-.header-logo {
-  width: 113px;
-}
-
 .logo-image {
   /* border: 1px solid #000; */
   text-align: center;
@@ -114,4 +110,8 @@
 .nav-a {
   color: var(--main-text-color);
   padding: 0 8px;
+}
+
+#menu__toggle {
+  visibility: hidden;
 }

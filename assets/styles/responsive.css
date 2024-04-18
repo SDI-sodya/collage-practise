@@ -1,0 +1,526 @@
+@media (max-width: 1330px) {
+  /* Wrapper */
+  .wrapper {
+    max-width: 920px;
+  }
+
+  /* Section About (Vision/Mission) */
+  .about-block-image {
+    width: 450px;
+  }
+
+  /* Footer */
+  .footer-navigation {
+    background-color: #2D3F45;
+    padding: 25px 0;
+    display: block;
+  }
+
+  .footer-nav-list {
+    width: 70%;
+    float: left;
+    font-family: "Roboto";
+  }
+
+  .footer-navigation .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-nav-list, .footer-social-list {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-nav-list {
+    justify-content: space-between;
+  }
+
+  .footer-social-list {
+    justify-content: space-around;
+  }
+
+  .footer-nav-list .nav-elem {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 900px;
+  }
+
+  /* Tomato Market */
+  .cards-wrapper {
+    width: 100%;
+  }
+
+  .tomatos-card, .cards-title::before {
+    width: 30%;
+  }
+
+  .tomatos-cards {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    margin: 0 0 40px;
+  }
+
+  .section-shop {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 950px) {
+  /* Wrapper */
+  .wrapper {
+    max-width: 720px;
+  }
+  
+  /* Header (Navigation) */  
+  .header-wrapper {
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    background-color: #fff;
+    max-width: 100%;
+  }
+
+  .header-nav-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-logo {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .header-nav-search {
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .main-nav-search {
+    width: 45%;
+    margin: 20px auto 0;
+    padding: 5px 0;
+  }
+
+  .nav-list-row {
+    display: none;
+  }
+
+  .main-nav-list {
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: Heebo;
+    font-weight: 550;
+    font-size: 18px;
+    margin-top: 42px;
+  }
+  
+  /* Main */
+  .main {
+    padding: 200px 0 0;
+  }
+
+  /* First section (Products) */
+  .homepage-product {
+    width: 200px;
+  }
+
+  /* Vision/Misson (Section About) */
+  .text-decoration {
+    margin: 20px 0;
+    letter-spacing: 5px;
+    color: var(--add-text-color);
+  }
+
+  .about-block-image {
+    width: 350px;
+  }
+
+  /* Main Activities */
+  .main-activities-info {
+    flex-wrap: wrap;
+  }
+
+  .main-activity {
+    width: 30%;
+  }
+
+  .activity-title {
+    font-size: 20px;
+  }
+
+  .activity-text {
+    font-size: 16px;
+  }
+
+
+  /* Footer */
+  .footer-navigation {
+    background-color: #2D3F45;
+    padding: 25px 0;
+    display: block;
+  }
+
+  .footer-nav-list {
+    width: 70%;
+    float: left;
+    font-family: "Roboto";
+  }
+
+  .footer-nav-list {
+    flex-wrap: wrap;
+  }
+
+  .footer-nav-list .nav-elem {
+    margin: 5px 0;
+  }
+
+  .footer-social-list .nav-elem {
+    margin: 0 0 0 13px;
+  }
+
+
+  /* Hamburger menu */
+  #menu__toggle {
+    visibility: visible;
+    opacity: 0;
+  }
+  
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  .menu__box {
+    z-index: 2;
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: -45px;
+    right: 0 !important;
+    width: 300px;
+    height: 100%;
+    padding: 80px 0;
+    list-style: none;
+    /* text-align: center; */
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  }
+  
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+  
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* HOMEPAGE */
+  /* Main activities */
+  .main-activities-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    max-width: 580px;
+  }
+
+  .header-wrapper {
+    max-width: 100% !important;
+  }
+
+  /* Tomato Market */
+  .cards-wrapper {
+    width: 100%;
+  }
+
+  .cards-title {
+    height: 3em;
+  }
+
+  .cards-title::before {
+    margin: 3em auto;
+  }
+
+  .cards-title::before {
+    width: 50%;
+  }
+
+  .tomatos-card {
+    width: 100%;
+  }
+
+  .tomatos-cards {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    margin: 0 0 40px;
+  }
+
+  .tomatos-card .market-text {
+    margin: 0 0 40px;
+  }
+
+  .section-shop {
+    justify-content: space-around;
+  }
+
+  /* Shop item */
+  .view-header {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .view-header-block {
+    width: 100%;
+  }
+
+  .view-illustration {
+    text-align: center;
+  }
+
+  .view-info-block {
+    clear: none;
+  }
+
+  .view-info {
+    display: block;
+    width: 100%;
+  }
+
+
+  /* Footer */
+  .footer-wrapper {
+    width: 80%;
+  }
+
+  .footer-nav-list {
+    width: auto;
+  }
+
+  .footer-nav-list {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .footer-nav-list .nav-elem {
+    margin: 15px 0;
+  }
+
+  .footer-social-list {
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    max-width: 420px;
+  }
+
+  /* Footer */
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer-social-list {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer-social-list .nav-elem {
+    margin: 10px 5px;
+  }
+
+  .nav-social-elem {
+    margin: 0;
+  }
+
+  .fa-brands {
+    font-size: 1.4em;
+    padding: 2px;
+  }
+
+  .nav-social-elem {
+    border: 3px solid var(--add-text-color);
+    padding: 3px;
+    border-radius: 200px;
+  }
+
+
+  /* Vision/Misson (Section About) */
+  .homepage-about {
+    background: url(../images/union_bg.png) no-repeat;
+    background-color: #F7F7F7;
+    background-position: center;
+    background-size: 300%;
+  }
+
+  .about-block {
+    flex-direction: column;
+  }
+
+  .about-block:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .about-block-text {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  .about-block-image {
+    width: 80%;  
+    text-align: center;
+  }
+
+
+  /* Main Activities */
+  .homepage-main-activities {
+    background-color: #EDEDED;
+    padding: 80px 0;
+    text-align: center;
+  }
+
+  .main-activities-info {
+    flex-wrap: wrap;
+  }
+  
+  .main-activity {
+    margin: 20px 0;
+    display: block;
+    width: 100%;
+  }
+
+  .activity-text {
+    text-wrap: pretty;
+  }
+  
+  .activity-image {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  /* Shop Item */
+  .tomato-view-title, .tomato-view-subtitle {
+    font-size: 34px;
+    line-height: 1.4;
+  }
+  .view-fact-info {
+    font-size: 20px;
+  }
+
+  /* Contact */
+  .contact-form {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .contact-form-block:first-child, .contact-form-block:last-child {
+    width: 100%;
+  }
+
+  .captcha-code {
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  #captcha {
+    margin: 0;
+    width: 100%;
+  }
+
+  .submit-contact-form {
+    width: 100% !important;
+    margin: 30px auto 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    max-width: 380px;
+  }
+  
+  .title {
+    font-size: 54px;
+  }
+
+  .info-title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    max-width: 300px;
+  }
+}
