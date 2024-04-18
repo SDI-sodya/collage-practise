@@ -58,6 +58,16 @@ a {
   border: 2px solid var(--add-text-color);
   border-radius: 50px;
   padding: 10px 30px;
+  font-size: 17px;
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  display: flex;
+  margin: 0 0 0 auto;
+  align-items: center;
+}
+
+.button-item-info-download img {
+  margin-right: 10px;
 }
 
 .list-style-disk {
@@ -340,7 +350,13 @@ a {
 }
 
 .view-fact {
+  display: flex;
+  align-items: center;
   margin: 40px 0;
+}
+
+.view-fact-img {
+  margin-right: 10px;
 }
 
 .view-fact-info {
