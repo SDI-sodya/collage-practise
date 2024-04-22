@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="../assets/styles/reset.css">
   <link rel="stylesheet" href="../assets/styles/style.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
-  <title>Tomato</title>
+  <title>Products Market</title>
   <script defer src="https://kit.fontawesome.com/4c0d9c2968.js" crossorigin="anonymous"></script>
 
 </head>
@@ -40,13 +40,13 @@
       </nav>
     </div>
   </header>
-  <main class="main tomato-main">
+  <main class="main tomato-main" id="app">
     <section class="slideshow">
-      <img src="../assets/images/slideshow/ss_1.jpg" alt="Slideshow_1">
+      <img :src="'../assets/images/slideshow/'+title_image" alt="Slideshow_1">
     </section>
     <div class="wrapper">
       <section class="market-info">
-        <h1 class="subtitle market-title">Agridera Fresh Market Tomato Hybrids</h1>
+        <h1 class="subtitle market-title">Agridera Fresh Market {{ page_title }}</h1>
         <p class="text-decoration">*****</p>
         <p class="market-text main-text">
           Agridera aims to be one of the world's leading companies in the breeding, production, and marketing of tomato seeds. <strong>We invest intensively in research and development to provide solutions to growers and consumers in numerous countries around the world.</strong>
@@ -94,46 +94,11 @@
       <p class="market-text main-text attention-text">
         Agridera operates through international and local distributers around the world.
       </p>
-      <section class="section-shop">
-        <article class="shop-item"><a href="tomato_shop_item.html">
-          <div class="shop-item-image"><img src="../assets/images/market/tomato/item1.jpg" alt="Item1"></div>
-          <h3 class="shop-item-tittle">TAG 1000 (TAG 853)</h3>
-          <p class="shop-item-info">Tomato Determinate Red Standard Round</p>
-        </a></article>
-        <article class="shop-item"><a href="tomato_shop_item.html">
-          <div class="shop-item-image"><img src="../assets/images/market/tomato/item2.jpg" alt="Item2"></div>
-          <h3 class="shop-item-tittle">TAG 1001 (TAG 855)</h3>
-          <p class="shop-item-info">Tomato Determinate Red Standard Round</p>
-        </a></article>
-        <article class="shop-item"><a href="tomato_shop_item.html">
-          <div class="shop-item-image"><img src="../assets/images/market/tomato/item3.jpg" alt="Item3"></div>
-          <h3 class="shop-item-tittle">TAG 1002 (TAG 809)</h3>
-          <p class="shop-item-info">Tomato Determinate Red Standard Round</p>
-        </a></article>
-        <article class="shop-item"><a href="tomato_shop_item.html">
-          <div class="shop-item-image"><img src="../assets/images/market/tomato/item4.jpg" alt="Item3"></div>
-          <h3 class="shop-item-tittle">TAG 1003 (TAG 834)</h3>
-          <p class="shop-item-info">Tomato Determinate Red Standard Round</p>
-        </a></article>
-        <article class="shop-item"><a href="tomato_shop_item.html">
-          <div class="shop-item-image"><img src="../assets/images/market/tomato/item5.jpg" alt="Item3"></div>
-          <h3 class="shop-item-tittle">TAG 1004 (TAG 848)</h3>
-          <p class="shop-item-info">Tomato Determinate Red BEEF Round</p>
-        </a></article>
-        <article class="shop-item"><a href="tomato_shop_item.html">
-          <div class="shop-item-image"><img src="../assets/images/market/tomato/item6.jpg" alt="Item3"></div>
-          <h3 class="shop-item-tittle">TAG 1005 (TAG 800)</h3>
-          <p class="shop-item-info">Tomato Determinate Red Standard Round</p>
-        </a></article>
-        <article class="shop-item"><a href="tomato_shop_item.html">
-          <div class="shop-item-image"><img src="../assets/images/market/tomato/item7.jpg" alt="Item3"></div>
-          <h3 class="shop-item-tittle">TAG 1006 (TAG 898)</h3>
-          <p class="shop-item-info">Tomato Determinate Red Elongated</p>
-        </a></article>
-        <article class="shop-item"><a href="tomato_shop_item.html">
-          <div class="shop-item-image"><img src="../assets/images/market/tomato/item8.jpg" alt="Item3"></div>
-          <h3 class="shop-item-tittle">TAG 1007 (TAG 816))</h3>
-          <p class="shop-item-info">Tomato Determinate Red Elongated</p>
+      <section class="section-shop" v-if="products">
+        <article class="shop-item" v-for="p in products"><a href="tomato_shop_item.html">
+          <div class="shop-item-image"><img :src="'../assets/images/market/peppers/'+p.image" alt="Item1"></div>
+          <h3 class="shop-item-tittle">{{ p.title }}</h3>
+          <p class="shop-item-info">{{ p.short_text }}</p>
         </a></article>
       </section>
     </div>
@@ -161,5 +126,8 @@
       </nav>
     <p class="footer-info">Agridera seeds & Agriculture LTD. © 2020</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>
