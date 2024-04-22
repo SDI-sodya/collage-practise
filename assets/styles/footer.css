@@ -38,7 +38,8 @@
 }
 
 .footer-social-list .nav-elem {
-  margin: 0 0 0 13px;
+  text-align: center;
+  margin: 0 6px 0 6px;
 }
 
 .footer-nav-list .nav-elem .nav-a:first-child {

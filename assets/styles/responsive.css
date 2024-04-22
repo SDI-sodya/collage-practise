@@ -129,6 +129,10 @@
     padding: 200px 0 0;
   }
 
+  .homepage {
+    padding: 0;
+  }
+
   /* First section (Products) */
   .homepage-product {
     width: 200px;
@@ -182,10 +186,6 @@
 
   .footer-nav-list .nav-elem {
     margin: 5px 0;
-  }
-
-  .footer-social-list .nav-elem {
-    margin: 0 0 0 13px;
   }
 
 
@@ -355,7 +355,9 @@
 
   /* Footer */
   .footer-wrapper {
+    flex-direction: column;
     width: 80%;
+    text-align: center;
   }
 
   .footer-nav-list {
