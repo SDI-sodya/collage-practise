@@ -112,3 +112,31 @@ var app = new Vue({
 		],
     product: null,
 	},
+	mounted: function () {
+		// console.log(window.localStorage.getItem('prod'));
+		this.getProduct();
+	},
+	methods: {
+		addItem: function (id) {
+			window.localStorage.setItem('products', id);
+		},
+		getProduct: function () {
+			if (window.location.hash) {
+				var prod_id = window.location.hash.replace('#', '');
+				if (this.products && this.products.length > 0) {
+					for (i in this.products) {
+						if (
+							this.products[i] &&
+							this.products[i].id &&
+							prod_id == this.products[i].id
+						) {
+							this.product = this.products[i];
+              return;
+						}
+					}
+				}
+			}
+      this.product = null;
+		},
+	},
+});
