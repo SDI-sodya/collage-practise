@@ -40,7 +40,7 @@
       </nav>
     </div>
   </header>
-  <main class="main tomato-item-view">
+  <main class="main tomato-item-view" id="app">
     <div class="wrapper">
       <div class="return-back">
         <p class="return-back-text"><a href="./tomato.html"><-- Return to all tomatoes</a></p>
@@ -48,8 +48,8 @@
       <section class="tomato-view">
         <section class="view-header">
           <div class="view-header-block">
-            <h1 class="title tomato-view-title">TAG 1002 (TAG 809)</h1>
-            <h2 class="title tomato-view-subtitle">Tomato Determinate Red Standard Round</h2>
+            <h1 class="title tomato-view-title">{{ product.title }}</h1>
+            <h2 class="title tomato-view-subtitle">{{ product.short_text }}</h2>
             <p class="text-decoration">*****</p>
             <div class="view-fact">
               <div class="view-fact-img"><img src="../assets/images/tomato_fact_img.png" alt="Tomato Icon"></div>
@@ -58,7 +58,7 @@
           </div>
           <div class="view-header-block">
             <section class="view-illustration">
-              <div class="view-illustration-image"><img src="../assets/images/market/tomato/item3.jpg" alt="Tomatos"></div>
+              <div class="view-illustration-image"><img :src="'../assets/images/market/peppers/'+product.image" alt="Tomatos"></div>
               <a href="./err.html">
                 <button class="button-item-info-download">
                   <img src="../assets/images/pdg_icon.png" alt=""><span>Download pdf</span>
@@ -72,43 +72,35 @@
             <article class="view-info">
               <h3 class="view-info-title info-title">Characteristics</h3>
               <ul class="view-info-list">
-                <li class="nav-list"><b>Resistance</b></li>
-                <li class="nav-list">HR: ToMV:0-2; Fol: 1,2; Ve/Vd; </li>
-                <li class="nav-list">IR: TYLCV</li>
+                {{ product.desc.characteristics }}
               </ul>
             </article>
           </div>
           <div class="view-info-block">
             <article class="view-info">
               <h3 class="view-info-title info-title">Plant</h3>
-              <ul class="view-info-list list-style-disk">
-                <li class="nav-list">Strong vigor that provides good leaf coverage.</li>
-                <li class="nav-list">Very high productivity with good fruit setting.</li>
-                <li class="nav-list">Early matured variety.</li>
+              <ul class="view-info-list list-style-disk" v-for="p_plant in product.desc.plant">
+                <li class="nav-list">{{ p_plant }}</li>
               </ul>
             </article>
             <article class="view-info">
               <h3 class="view-info-title info-title">Fruit</h3>
-              <ul class="view-info-list list-style-disk">
-                <li class="nav-list">Long shelf life on plant and post harvest.</li>
-                <li class="nav-list">Nice shiny attractive deep red color.</li>
-                <li class="nav-list">Average fruit size: 140 – 160 grams.</li>
+              <ul class="view-info-list list-style-disk" v-for="p_fruit in product.desc.fruit">
+                <li class="nav-list">{{ p_fruit }}</li>
               </ul>
             </article>
           </div>
           <div class="view-info-block">
             <article class="view-info">
               <h3 class="view-info-title info-title">Cycle</h3>
-              <ul class="view-info-list list-style-disk">
-                <li class="nav-list">Spring</li>
-                <li class="nav-list">Fall</li>
-                <li class="nav-list">Winter</li>
+              <ul class="view-info-list list-style-disk" v-for="p_cycle in product.desc.cycle">
+                <li class="nav-list">{{ p_cycle }}</li>
               </ul>
             </article>
             <article class="view-info">
               <h3 class="view-info-title info-title">Color</h3>
-              <ul class="view-info-list">
-                <li class="nav-list">Red</li>
+              <ul class="view-info-list" v-for="p_color in product.desc.color">
+                <li class="nav-list">{{ p_color }}</li>
               </ul>
             </article>
           </div>
@@ -140,5 +132,7 @@
       </nav>
     <p class="footer-info">Agridera seeds & Agriculture LTD. © 2020</p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>

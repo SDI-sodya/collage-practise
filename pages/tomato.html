@@ -95,7 +95,7 @@
         Agridera operates through international and local distributers around the world.
       </p>
       <section class="section-shop" v-if="products">
-        <article class="shop-item" v-for="p in products"><a href="tomato_shop_item.html">
+        <article class="shop-item" v-for="p in products"><a :href="'tomato_shop_item.html'+p.id">
           <div class="shop-item-image"><img :src="'../assets/images/market/peppers/'+p.image" alt="Item1"></div>
           <h3 class="shop-item-tittle">{{ p.title }}</h3>
           <p class="shop-item-info">{{ p.short_text }}</p>
