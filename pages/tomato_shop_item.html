@@ -59,9 +59,14 @@
           <div class="view-header-block">
             <section class="view-illustration">
               <div class="view-illustration-image"><img :src="'../assets/images/market/peppers/'+product.image" alt="Tomatos"></div>
-              <a href="./err.html">
+              <a href="#">
+                <button class="button-item-info-download" @click.prevent="addToCart(product.id)" v-if="!btnVisible">
+                  <img src="../assets/images/pdg_icon.png" alt=""><span>Add to cart</span>
+                </button>
+              </a>
+              <a href="tomato_shop_item.html" v-if="btnVisible">
                 <button class="button-item-info-download">
-                  <img src="../assets/images/pdg_icon.png" alt=""><span>Download pdf</span>
+                  <img src="../assets/images/pdg_icon.png" alt=""><span>Go to cart</span>
                 </button>
               </a>
             </section>
