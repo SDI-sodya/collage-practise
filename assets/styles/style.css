@@ -414,6 +414,18 @@ a {
 
 
 /* Contact */
+.cart-title {
+  margin: 0 0 20px;
+}
+
+.cart-items {
+  margin: 0 0 30px;
+}
+
+.cart-table * * td {
+  padding: 5px;
+}
+
 .contact-form-section {
   padding-top: 51px;
 }

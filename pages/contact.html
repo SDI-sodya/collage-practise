@@ -48,6 +48,27 @@
       <section class="contact-form-section">
         <h1 class="title subtitle contact-title">Contact us</h1>
         <p class="text-decoration">*****</p>
+        <section class="cart-items">
+          <h2 class="title subtitle cart-title">Cart Items</h2>
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="item in cart" :key="item.id">
+                <td><img :src="'../assets/images/market/peppers/' + item.image" alt="Product Image" width="50"></td>
+                <td>{{ item.title }}</td>
+                <td>{{ item.short_text }}</td>
+                <td><button @click="removeFromCart(item.id)">Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
         <form class="contact-form" action="#" method="get" @submit.prevent="makeOrder">
           <div class="contact-form-block">
             <label class="contact-form-label" for="name">
@@ -115,28 +136,6 @@
       <p class="contact-info-text main-text">Gedera 70750, Israel.</p>
       <p class="contact-info-text main-text">Telephone: <a class="a-tel" href="tel:+97289449222">+972 8 944 9222</a></p>
     </section>
-    <section class="cart-items">
-      <h2 class="title">Cart Items</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="item in cart" :key="item.id">
-            <td><img :src="'../assets/images/market/peppers/' + item.image" alt="Product Image" width="50"></td>
-            <td>{{ item.title }}</td>
-            <td>{{ item.short_text }}</td>
-            <td><button @click="removeFromCart(item.id)">Remove</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    
   </main>
   <footer class="footer">
     <nav class="footer-navigation">

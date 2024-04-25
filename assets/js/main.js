@@ -9,18 +9,6 @@ var app = new Vue({
 				title: 'Bell Peppers',
 				short_text: 'Red Bell Peppers',
 				image: 'red_bell_pepper.jpg',
-        contactFields: {
-          name: '',
-          companyName: '',
-          position: '',
-          city: '',
-          country: '',
-          tel: '',
-          email: '',
-          whoAreYou: '',
-          specify: '',
-          interestedIn: ''
-        },
 				desc: {
 					characteristics:
 						'The most recognizable of the sweet pepper varieties are bell peppers, which are also the most commonly available. Bell peppers are easy to grow in the garden, and abundantly available in the produce section of your grocery store, generally in either green, red, yellow, or orange. But there is so much more variety than those four colors among bell peppers!',
@@ -129,6 +117,19 @@ var app = new Vue({
 		],
 		product: null,
 		btnVisible: 0,
+		cart: '',
+		contactFields: {
+			name: '',
+			companyName: '',
+			position: '',
+			city: '',
+			country: '',
+			tel: '',
+			email: '',
+			whoAreYou: 0,
+			specify: '',
+			interestedIn: ''
+		},
 	},
 	mounted: function () {
 		// console.log(window.localStorage.getItem('prod'));
