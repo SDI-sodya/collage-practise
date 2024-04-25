@@ -9,6 +9,18 @@ var app = new Vue({
 				title: 'Bell Peppers',
 				short_text: 'Red Bell Peppers',
 				image: 'red_bell_pepper.jpg',
+        contactFields: {
+          name: '',
+          companyName: '',
+          position: '',
+          city: '',
+          country: '',
+          tel: '',
+          email: '',
+          whoAreYou: '',
+          specify: '',
+          interestedIn: ''
+        },
 				desc: {
 					characteristics:
 						'The most recognizable of the sweet pepper varieties are bell peppers, which are also the most commonly available. Bell peppers are easy to grow in the garden, and abundantly available in the produce section of your grocery store, generally in either green, red, yellow, or orange. But there is so much more variety than those four colors among bell peppers!',
@@ -122,7 +134,7 @@ var app = new Vue({
 		// console.log(window.localStorage.getItem('prod'));
 		this.getProduct();
     this.checkInCart();
-    // this.getCart();
+    this.getCart();
 	},
 	methods: {
 		addItem: function (id) {
@@ -169,5 +181,33 @@ var app = new Vue({
 				this.btnVisible = 1;
 			}
 		},
+    getCart: function() {
+      // Отримуємо дані з локального сховища
+      var cartIds = localStorage.getItem('cart');
+      if (cartIds) {
+        // Розділяємо рядок на масив id товарів
+        cartIds = cartIds.split(',');
+        // Фільтруємо масив продуктів за id
+        this.cart = this.products.filter(product => cartIds.includes(String(product.id)));
+      } else {
+        this.cart = [];
+      }
+    },
+    removeFromCart: function(productId) {
+      // Видаляємо товар з масиву cart
+      this.cart = this.cart.filter(item => item.id !== productId);
+      // Оновлюємо localStorage
+      var cartIds = this.cart.map(item => item.id).join(',');
+      localStorage.setItem('cart', cartIds);
+    },
+    makeOrder: function() {
+      // Отримуємо дані форми
+      var formData = JSON.stringify(this.contactFields);
+      // Виводимо дані форми
+      alert(formData);
+      // Очищуємо корзину
+      this.cart = [];
+      localStorage.removeItem('cart');
+    },
 	},
 });

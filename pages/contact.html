@@ -48,41 +48,41 @@
       <section class="contact-form-section">
         <h1 class="title subtitle contact-title">Contact us</h1>
         <p class="text-decoration">*****</p>
-        <form class="contact-form" action="#" method="get">
+        <form class="contact-form" action="#" method="get" @submit.prevent="makeOrder">
           <div class="contact-form-block">
             <label class="contact-form-label" for="name">
               <p class="form-input-title">Name *</p>
-              <input required type="text" name="name" id="name">
+              <input required type="text" name="name" id="name" v-model="contactFields.name">
             </label>
             <label class="contact-form-label" for="company-name">
               <p class="form-input-title">Company name *</p>
-              <input required type="text" name="company-name" id="company-name">
+              <input required type="text" name="company-name" id="company-name" v-model="contactFields.companyName">
             </label>
             <label class="contact-form-label" for="position">
               <p class="form-input-title">Position *</p>
-              <input required type="text" name="position" id="position">
+              <input required type="text" name="position" id="position" v-model="contactFields.position">
             </label>
             <label class="contact-form-label" for="city">
               <p class="form-input-title">City *</p>
-              <input required type="text" name="city" id="city">
+              <input required type="text" name="city" id="city" v-model="contactFields.city">
             </label>
             <label class="contact-form-label" class="contact-form-label" for="country">
               <p class="form-input-title">Country *</p>
-              <input required type="text" name="country" id="country">
+              <input required type="text" name="country" id="country" v-model="contactFields.country">
             </label>
             <label class="contact-form-label" for="tel">
               <p class="form-input-title">Telephone *</p>
-              <input required type="tel" name="tel" id="tel">
+              <input required type="tel" name="tel" id="tel" v-model="contactFields.tel">
             </label>
             <label class="contact-form-label" for="email">
               <p class="form-input-title">Email *</p>
-              <input required type="email" name="email" id="email">
+              <input required type="email" name="email" id="email" v-model="contactFields.email">
             </label>
           </div>
           <div class="contact-form-block">
             <label class="contact-form-label" for="who-are-u">
               <p class="form-input-title">You are a *</p>
-              <select name="who-are-u" id="who-are-u">
+              <select name="who-are-u" id="who-are-u" v-model="contactFields.whoAreYou">
                 <option value="seed-prod1">seed producer 1</option>
                 <option value="seed-prod2">seed producer 2</option>
                 <option value="seed-prod3">seed producer 3</option>
@@ -91,11 +91,11 @@
             </label>
             <label class="contact-form-label" for="specify">
               <p class="form-input-title">If others, please specify</p>
-              <input type="text" name="specify" id="specify">
+              <input type="text" name="specify" id="specify" v-model="contactFields.specify">
             </label>
             <label class="contact-form-label" for="interested-in">
               <p class="form-input-title">You are interested in</p>
-              <textarea name="interested-in" id="interested-in" cols="30" rows="14"></textarea>
+              <textarea name="interested-in" id="interested-in" cols="30" rows="14" v-model="contactFields.interestedIn"></textarea>
             </label>
             <label class="contact-form-label" for="captcha">
               <p class="form-input-title">Please type this code</p>
@@ -115,6 +115,28 @@
       <p class="contact-info-text main-text">Gedera 70750, Israel.</p>
       <p class="contact-info-text main-text">Telephone: <a class="a-tel" href="tel:+97289449222">+972 8 944 9222</a></p>
     </section>
+    <section class="cart-items">
+      <h2 class="title">Cart Items</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in cart" :key="item.id">
+            <td><img :src="'../assets/images/market/peppers/' + item.image" alt="Product Image" width="50"></td>
+            <td>{{ item.title }}</td>
+            <td>{{ item.short_text }}</td>
+            <td><button @click="removeFromCart(item.id)">Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
   </main>
   <footer class="footer">
     <nav class="footer-navigation">
