@@ -182,6 +182,7 @@ var app = new Vue({
 			}
 		},
     getCart: function() {
+			// debugger;
       // Отримуємо дані з локального сховища
       var cartIds = localStorage.getItem('cart');
       if (cartIds) {
@@ -201,13 +202,16 @@ var app = new Vue({
       localStorage.setItem('cart', cartIds);
     },
     makeOrder: function() {
-      // Отримуємо дані форми
-      var formData = JSON.stringify(this.contactFields);
-      // Виводимо дані форми
-      alert(formData);
-      // Очищуємо корзину
-      this.cart = [];
-      localStorage.removeItem('cart');
-    },
+			// Отримати дані форми
+			const formData = this.contactFields;
+			// Додати інформацію про товари у корзині
+			formData.cartItems = this.cart;
+			// Конвертувати у JSON
+			const orderData = JSON.stringify(formData);
+			console.log(orderData); // Дані замовлення у форматі JSON у консоль
+			// Очистити корзину
+			this.cart = [];
+			window.localStorage.removeItem('cart');
+		},
 	},
 });
