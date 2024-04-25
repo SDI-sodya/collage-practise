@@ -171,7 +171,7 @@ var app = new Vue({
 		},
 		checkInCart: function () {
 			if (
-				this.priduct &&
+				this.product &&
 				this.product.id &&
 				window.localStorage
 					.getItem('cart')
