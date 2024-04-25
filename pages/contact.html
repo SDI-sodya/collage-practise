@@ -45,7 +45,7 @@
       <img src="../assets/images/slideshow/ss_2.jpg" alt="Slideshow-1">
     </section>
     <div class="wrapper">
-      <section class="contact-form-section">
+      <section v-if="!orderSubmitted" class="contact-form-section">
         <h1 class="title subtitle contact-title">Contact us</h1>
         <p class="text-decoration">*****</p>
         <section class="cart-items">
@@ -126,6 +126,16 @@
             </label>
           </div>
         </form>
+      </section>
+      <section class="contact-form-submitted" v-if="orderSubmitted">
+        <h1 class="title subtitle">Thank you for your order!</h1>
+        <p class="main-text">Name: {{ contactFields.name }}</p>
+        <p class="main-text">Email: {{ contactFields.email }}</p>
+        <p class="main-text">Company: {{ contactFields.companyName }}</p>
+        <p class="main-text">Position: {{ contactFields.position }}</p>
+        <p class="main-text">City: {{ contactFields.city }}</p>
+        <p class="main-text">Country: {{ contactFields.country }}</p>
+        <p class="main-text">Telephone: {{ contactFields.tel }}</p>
       </section>
       <div class="clear"></div>
     </div>

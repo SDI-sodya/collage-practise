@@ -130,6 +130,7 @@ var app = new Vue({
 			specify: '',
 			interestedIn: ''
 		},
+		orderSubmitted: false,
 	},
 	mounted: function () {
 		// console.log(window.localStorage.getItem('prod'));
@@ -213,6 +214,7 @@ var app = new Vue({
 			// Очистити корзину
 			this.cart = [];
 			window.localStorage.removeItem('cart');
+			this.orderSubmitted = true;
 		},
 	},
 });
